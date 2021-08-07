@@ -5,7 +5,7 @@ function point_in_parallelogram(_point_x,_point_y,_start_x,_start_y,_width,_heig
 	
 	if (point_in_rectangle(_point_x,_point_y,_start_x,_start_y,_start_x+_width,_start_y+_height)) {
 	
-		var _ratio = tan((_angle/360)*(pi*2))
+		var _ratio = dtan(_angle)
 	
 		var _pixels_above_top = _point_y - _start_y		// Find how far the mouse is away from the top
 		var _side_offset = _pixels_above_top*_ratio		// Side the mouse this amount horizontally
